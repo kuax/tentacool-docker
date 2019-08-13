@@ -1,6 +1,6 @@
 # Tentacool Docker Image
 
-Running the awesome [Tentacool](https://github.com/tentacool/tentacool) HpFeeds Broker in a Docker container is now possible.
+[Tentacool](https://github.com/tentacool/tentacool). Dockerized.
 
 ## Build
 
@@ -18,6 +18,7 @@ The container needs a `auth_keys.dat` file in `/usr/app/data`. The best option m
 
 ```bash
 sudo docker run -d --name tentacool-broker \
+	--restart always \
 	-v $PWD/data:/usr/app/data \
 	-p 10000:10000 \
 	tentacool
